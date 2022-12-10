@@ -1,8 +1,32 @@
 import React, { useEffect, useState } from 'react'
 import './index.css'
-import Logo from '../../assets/Logo.svg'
+import { Logo } from '../../assets/index'
 import { FiMenu } from 'react-icons/Fi'
 import { FaTimes } from 'react-icons/Fa'
+
+const Links = [
+    {
+        id: 1,
+        title: 'Home',
+        url: '#'
+    },
+    {
+        id: 2,
+        title: 'About Us',
+        url: '#'
+    },
+    {
+        id: 3,
+        title: 'Features',
+        url: '#'
+    },
+    {
+        id: 4,
+        title: 'Solution',
+        url: '#'
+    }
+];
+
 function index() {
     const [menu, setMenu] = useState(true);
 
@@ -21,10 +45,15 @@ function index() {
             </div>
             <div className={menu ? "header__menu " : "header__menu visible"}>
                 <ul>
-                    <li><a href='#'>Home</a></li>
-                    <li><a href='#'>About Us</a></li>
-                    <li><a href='#'>Features</a></li>
-                    <li><a href='#'>Solution</a></li>
+                    {
+                        Links.map((link) => (
+                            <li key={link.id}>
+                                <a href={link.url} onClick={() => setMenu(true)}>{
+                                    link.title
+                                }</a>
+                            </li>
+                        ))
+                    }
                 </ul>
             </div>
         </div>

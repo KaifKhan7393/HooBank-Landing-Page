@@ -56,4 +56,9 @@
     margin-top: 2rem;
     min-width: 13rem;
   }
+  .footer__copy {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }

@@ -118,6 +118,8 @@ button {
     #33bbcf 90.29%
   );
   border-radius: 1rem;
+  outline: none;
+  border: none;
   cursor: pointer;
 }
 button:hover {

@@ -1,16 +1,6 @@
 import React from 'react'
-import Header from './Components/Header/index'
-import Hero from './Components/Hero/index'
-import PageSection from './Components/PageSection/index'
-import PageContent from './Components/PageContent/index'
-import Img1 from './assets/Img-1.png'
-import Img2 from './assets/Img-2.png'
-import AppleStore from './assets/Apple-store.svg'
-import GooglePlay from './assets/Google-store.svg'
-import CompanyLogo from './Components/CompanyLogo/index'
-import SignatureCard from './Components/SignatureCard/index'
-import Testimonial from './Components/Testimonial/index'
-import Footer from './Components/Footer/index'
+import { Header, Hero, PageSection, PageContent, Testimonial, CompanyLogo, SignatureCard, Footer } from './Components/index'
+import { Img1, Img2, AppleStore, GooglePlay } from './assets/index'
 
 const Data = [
   {

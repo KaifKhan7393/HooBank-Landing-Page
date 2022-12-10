@@ -1,74 +1,89 @@
 import React from 'react'
 import './index.css'
-import Logo from '../../assets/Logo.svg'
+import { Logo } from '../../assets/index'
 import { FiInstagram } from 'react-icons/fi'
-import { BsFacebook, BsLinkedin } from 'react-icons/bs'
 import { FaTwitter } from 'react-icons/fa'
+import { BsFacebook, BsLinkedin } from 'react-icons/bs'
 
-const Menu1 = [
+const FooterMenu = [
     {
         id: 1,
-        title: "Content",
-        path: '#'
+        title: "Usefull Links",
+        menu: [
+            {
+                id: "Content",
+                title: "Content",
+                path: '#'
+            },
+            {
+                id: "How it Works",
+                title: "How it Works",
+                path: '#'
+            },
+            {
+                id: "Create",
+                title: "Create",
+                path: '#'
+
+            },
+            {
+                id: "Explore",
+                title: "Explore",
+                path: '#'
+            },
+            {
+                id: "Terms & Services",
+                title: "Terms & Services",
+                path: '#'
+            }
+        ]
     },
     {
         id: 2,
-        title: "How it Works",
-        path: '#'
+        title: "Community",
+        menu: [
+            {
+                id: "Help Center",
+                title: "Help Center",
+                path: '#'
+            },
+            {
+                id: "Partners",
+                title: "Partners",
+                path: '#'
+            },
+            {
+                id: "Suggestions",
+                title: "Suggestions",
+                path: '#'
+            },
+            {
+                id: "Blog",
+                title: "Blog",
+                path: '#'
+            },
+            {
+                id: "Newsletters",
+                title: "Newsletters",
+                path: '#'
+            }
+        ]
     },
     {
         id: 3,
-        title: "Create",
-        path: '#'
-    },
-    {
-        id: 4,
-        title: "Explore",
-        path: '#'
-    },
-    {
-        id: 5,
-        title: "Terms & Services",
-        path: '#'
-    }
-];
-const Menu2 = [
-    {
-        id: 1,
-        title: "Help Center",
-        path: '#'
-    },
-    {
-        id: 2,
-        title: "Partners",
-        path: '#'
-    },
-    {
-        id: 3,
-        title: "Suggestions",
-        path: '#'
-    },
-    {
-        id: 4,
-        title: "Blog",
-        path: '#'
-    },
-    {
-        id: 5,
-        title: "Newsletters",
-        path: '#'
-    }
-];
-const Menu3 = [
-    {
-        id: 1,
-        title: "Our Partner",
-        path: '#'
-    },
-    {
-        id: 2,
-        title: "Become a Partner",
-        path: '#'
+        title: "Partner",
+        menu: [
+            {
+                id: "Our Partner",
+                title: "Our Partner",
+                path: '#'
+            },
+            {
+                id: "Become a Partner",
+                title: "Become a Partner",
+                path: '#'
+            }
+        ]
     }
 ];
 const MediaIcons = [
@@ -102,30 +117,25 @@ function index() {
                     <img src={Logo} alt="Logo" />
                     <p>A new way to make the payments easy, reliable and secure.</p>
                 </div>
-                <div className="footer__menu">
-                    <h5>Usefull Links</h5>
-                    <ul>
-                        {Menu1.map((menu) => (
-                            <li key={menu.id}><a href={menu.path}>{menu.title}</a></li>
-                        ))}
-                    </ul>
-                </div>
-                <div className="footer__menu">
-                    <h5>Community</h5>
-                    <ul>
-                        {Menu2.map((menu) => (
-                            <li key={menu.id}><a href={menu.path}>{menu.title}</a></li>
-                        ))}
-                    </ul>
-                </div>
-                <div className="footer__menu">
-                    <h5>Partner</h5>
-                    <ul>
-                        {Menu3.map((menu) => (
-                            <li key={menu.id}><a href={menu.path}>{menu.title}</a></li>
-                        ))}
-                    </ul>
-                </div>
+                {
+                    FooterMenu.map((menu) => (
+                        <div className="footer__menu" key={menu.id}>
+                            <h5>{menu.title}</h5>
+                            <ul>
+                                {
+                                    menu.menu.map((item) => (
+                                        <li key={item.id}><a
+                                            href={item.path}
+                                        >
+                                            {item.title}
+                                        </a></li>
+                                    ))
+                                }
+                            </ul>
+                        </div>
+                    ))
+
+                }
             </div>
             <div className="footer__copy">
                 <p>Copyright © 2021 HookBank. All rights reserved.</p>

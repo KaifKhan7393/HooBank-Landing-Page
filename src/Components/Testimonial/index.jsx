@@ -1,9 +1,7 @@
 import React from 'react'
 import './index.css'
 import Card from './Card'
-import Avatar1 from '../../assets/Avatar-1.png'
-import Avatar2 from '../../assets/Avatar-2.png'
-import Avatar3 from '../../assets/Avatar-3.png'
+import { Avatar1, Avatar2, Avatar3 } from '../../assets/index'
 
 const Data = [
     {
@@ -12,7 +10,6 @@ const Data = [
         name: "Harman Jensen",
         Designation: "Founder & Leader",
         img: Avatar1,
-        class: "testimonial__cardHover"
     },
     {
         id: 2,
@@ -43,6 +40,7 @@ function index() {
                     ))
                 }
             </div>
+            <div className="testimonial__gradient"></div>
         </div>
     )
 }

@@ -1,9 +1,7 @@
 import React from 'react'
-import HeroImg from '../../assets/Hero-Img-1.png'
-import Percentage from '../../assets/Percentage.svg'
-import { BsArrowUpRight } from 'react-icons/bs'
+import { Hero, Percentage } from '../../assets/index'
 import './index.css'
-import GetStarted from '../GetStarted/index'
+import { GetStarted } from '../index'
 function index() {
     return (
         <>
@@ -25,7 +23,7 @@ function index() {
                         We examine annual percentage rates, annual fees.</p>
                 </div>
                 <div className="hero__image">
-                    <img src={HeroImg} alt="Hero Image" />
+                    <img src={Hero} alt="Hero Image" />
                     <div className="hero__gradient"></div>
                     <div className="hero__gradient"></div>
                 </div>

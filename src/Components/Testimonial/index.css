@@ -1,5 +1,7 @@
 .testimonial {
   margin-top: 5rem;
+  position: relative;
+  /* overflow: hidden; */
 }
 
 .testimonial__content {
@@ -53,6 +55,17 @@
   height: 5rem;
   border-radius: 50%;
   object-fit: cover;
+}
+.testimonial__gradient {
+  position: absolute;
+  width: 40rem;
+  height: 30rem;
+  right: 0rem;
+  top: 10rem;
+  background: linear-gradient(90deg, #1a2980 0%, #26d0ce 100%);
+  filter: blur(325px);
+  border-radius: 200px;
+  z-index: -1;
 }
 @media (max-width: 840px) {
   .testimonial__card {

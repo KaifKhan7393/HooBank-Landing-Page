@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 1px solid red; */
+}
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+body {
+  background: #00040f;
+  font-family: "Abel", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 170%;
+  letter-spacing: 0.01rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
+}
+h1 {
+  font-weight: 600;
+  font-size: 6rem;
+  line-height: 140%;
+  color: #ffffff;
+}
+h2 {
+  font-weight: 600;
+  font-size: 4.8rem;
+  line-height: 140%;
+  color: #ffffff;
+}
+h3 {
+  font-weight: 600;
+  font-size: 4rem;
+  line-height: 130%;
+  color: #ffffff;
+}
+h4 {
+  font-size: 2rem;
+  line-height: 130%;
+}
+h5 {
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 130%;
+  text-transform: capitalize;
+  color: #ffffff;
+}
+a {
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 130%;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: inherit;
+  transition: all 0.3s ease;
+}
+a:hover {
+  letter-spacing: 0.01rem;
+  background: radial-gradient(
+    64.18% 64.18% at 71.16% 35.69%,
+    #def9fa 0.89%,
+    #bef3f5 17.23%,
+    #9dedf0 42.04%,
+    #7de7eb 55.12%,
+    #5ce1e6 71.54%,
+    #33bbcf 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+.text__gradient {
+  letter-spacing: 0.01rem;
+  background: radial-gradient(
+    64.18% 64.18% at 71.16% 35.69%,
+    #def9fa 0.89%,
+    #bef3f5 17.23%,
+    #9dedf0 42.04%,
+    #7de7eb 55.12%,
+    #5ce1e6 71.54%,
+    #33bbcf 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+.pad {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+button {
+  padding: 0.7rem 2.2rem;
+  font-size: 1.8rem;
+  font-weight: 500;
+  min-width: 15rem;
+  max-width: 16rem;
+  line-height: 150%;
+  background: linear-gradient(
+    157.81deg,
+    #def9fa -43.27%,
+    #bef3f5 -21.24%,
+    #9dedf0 12.19%,
+    #7de7eb 29.82%,
+    #5ce1e6 51.94%,
+    #33bbcf 90.29%
+  );
+  border-radius: 1rem;
+  cursor: pointer;
+}
+button:hover {
+  opacity: 0.8;
+}
+.row-reverse {
+  flex-direction: row-reverse;
+}
+@media (min-width: 768px) and (max-width: 1100px) {
+  h1 {
+    font-size: 6rem;
+    line-height: 130%;
+  }
+  h2 {
+    font-size: 4rem;
+    line-height: 140%;
+  }
+  h3 {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 767px) {
+  h1 {
+    font-size: 3.8rem;
+  }
+  h2 {
+    font-size: 3rem;
+  }
+  h3 {
+    font-size: 1.8rem;
+  }
+  .pad {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .row-reverse {
+    flex-direction: column;
+  }
+  .body__blur::after {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    filter: blur(0.5rem);
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.7s ease;
+    z-index: 1;
+  }
+}

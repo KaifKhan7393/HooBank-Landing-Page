@@ -1,0 +1,109 @@
+.hero {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 5rem;
+}
+.hero__content {
+  margin-top: 10rem;
+  position: relative;
+  padding-left: 10%;
+}
+.hero__top {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  background: linear-gradient(125.17deg, #272727 0%, #11101d 100%);
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+  max-width: 40rem;
+}
+.hero__top span {
+  color: #fff;
+}
+.hero__textAndBtn {
+  display: flex;
+  width: 100%;
+}
+.hero__textAndBtn h1 {
+  width: 100%;
+  display: inline-block;
+}
+.hero__image {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+}
+.hero__gradient {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  filter: blur(61.5px);
+  height: 90%;
+  background: linear-gradient(180deg, rgba(188, 165, 255, 0) 0%, #214d76 100%);
+  z-index: -1;
+}
+.hero__gradient:nth-child(2) {
+  background: rgba(255, 255, 255, 0.6);
+  filter: blur(375px);
+  z-index: -2;
+  background: linear-gradient(180deg, rgba(188, 165, 255, 0) 0%, #214d76 100%);
+}
+.hero__image img {
+  width: 80%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.hero__numbers {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 5rem;
+}
+.hero__numbers h3 span {
+  font-size: 2rem;
+}
+@media (max-width: 840px) {
+  .hero {
+    flex-direction: column;
+    margin-top: 0;
+  }
+  .hero__content {
+    flex-basis: 100%;
+    margin-top: 5rem;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .hero__image {
+    flex-basis: 100%;
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .hero__image img {
+    width: 100%;
+    object-fit: contain;
+  }
+  .hero__btn {
+    display: flex;
+    top: 1rem;
+    right: 0%;
+  }
+  .hero__numbers {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .hero__numbers h3 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero__numbers h3 span {
+    font-size: 1.4rem;
+  }
+}

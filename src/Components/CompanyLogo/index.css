@@ -1,0 +1,27 @@
+.companyLogo {
+  display: flex;
+  margin-top: 5rem;
+  align-items: center;
+  justify-content: space-between;
+  overflow-x: auto;
+  gap: 2rem;
+}
+.companyLogo::-webkit-scrollbar {
+  display: none;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+.companyLogo img {
+  width: 100%;
+  max-width: 20rem;
+  max-height: 7rem;
+}
+
+@media (max-width: 767px) {
+  .companyLogo img {
+    width: 100%;
+    max-width: 10rem;
+    max-height: 3.5rem;
+  }
+}

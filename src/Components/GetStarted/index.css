@@ -1,0 +1,24 @@
+.hero__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  margin-right: 2rem;
+  margin-top: 2rem;
+  text-align: center;
+  line-height: 1;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  font-size: 1.8rem;
+  border: 1px solid aqua;
+  border-radius: 50%;
+  background-color: #7db9e8;
+  cursor: pointer;
+}
+@media (max-width: 840px) {
+  .hero__btn {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

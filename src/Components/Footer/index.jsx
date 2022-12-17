@@ -110,6 +110,7 @@ const MediaIcons = [
 ];
 
 function index() {
+    const year = new Date().getFullYear();
     return (
         <div className="footer pad">
             <div className="footer__menus">
@@ -138,7 +139,7 @@ function index() {
                 }
             </div>
             <div className="footer__copy">
-                <p>Copyright © 2021 HookBank. All rights reserved.</p>
+                <p>Copyright © {year} HookBank. All rights reserved.</p>
                 <div className="footer__media">
                     {
                         MediaIcons.map((icon) => (
